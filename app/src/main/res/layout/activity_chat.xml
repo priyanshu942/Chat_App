@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".chat">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/chatRec"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LinearL"
+        android:layout_alignParentTop="true"
+        />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/LinearL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal">
+     <EditText
+         android:layout_width="wrap_content"
+         android:layout_height="50dp"
+         android:id="@+id/message"
+         android:textColorHint="@color/black"
+         android:textColor="@color/black"
+         android:paddingLeft="10dp"
+         android:hint="Type your message here"
+         android:layout_marginLeft="10dp"
+         android:layout_weight="85"
+         android:background="@drawable/back"
+         android:layout_marginBottom="10dp"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:background="@color/white"
+            android:src="@drawable/pgn"
+            android:id="@+id/snd"
+            android:layout_weight="20"/>
+    </LinearLayout>
+</RelativeLayout>
